@@ -1,1 +1,94 @@
-﻿
+﻿$color-hmm: #cccccc
+=size($size)
+	width: $size
+	height: $size
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	border-radius:         $radius
+
+header
+	height: 450px
+	background: url(../new-images/74h.jpg) center center
+	background-size: cover 
+	font-family: 'lato'
+
+.logo
+	img
+		+size(50px)
+		float: left
+		margin: 10px 0 0 30px
+
+
+
+
+
+
+nav
+	float: right
+	margin: 30px 30px 0 0
+
+	a
+		display: inline-block
+		margin-left: 20px
+
+		color: rgba(0,0,0,0.7)
+		font:
+			weight: 700
+			size: 14px
+		text-transform: uppercase
+
+		&:hover
+			color: rgba(0,0,0,1)
+
+h1
+	text-align: center
+	font:
+		size: 72px
+		weight: 700
+	color: white
+	text-transform: uppercase
+	letter-spacing: 0.05em
+	margin-bottom: 20px
+	clear: both
+	padding-top: 100px
+
+	span
+		display: inline-block
+		padding: 0.2em 0.5em
+		border: white solid 10px
+
+.kicker
+	text-align: center
+	font:
+		weight: 700
+	text-transform: uppercase
+	letter-spacing: 0.05em
+	color: white
+	line-height: 1
+
+footer
+	background: url(../new-images/74h.jpg) center center
+	background-size: cover
+
+	.lockup
+		padding-top: 30px
+		clear: both
+		content: ""
+		display: table
+
+	.logo
+		+size(50px)
+		float: left
+		margin-right: 30px 
+
+	.content-wrap
+		float: left
+
+	.copywrights
+		margin: 0
+		text-transform: uppercase
+		font-size: 12px
+		color: rgba(0,0,0,0.4)
