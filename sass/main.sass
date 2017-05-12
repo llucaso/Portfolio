@@ -1,4 +1,7 @@
-﻿$color-hmm: #cccccc
+﻿*
+	margin: 0
+	padding: 0
+$color-hmm: #cccccc
 =size($size)
 	width: $size
 	height: $size
@@ -11,9 +14,10 @@
 	-ms-border-radius:     $radius
 	border-radius:         $radius
 
+//header
 header
 	height: 450px
-	background: url(../new-images/gdyniaprisma.jpg)
+	background: url(../new-images/gdyniaprisma.jpg) center center
 	background-size: cover 
 	font-family: 'lato'
 
@@ -67,6 +71,7 @@ h1
 	color: white
 	line-height: 1
 
+//footer
 footer
 	background: url(../new-images/gdyniaprisma.jpg)
 	background-size: cover
@@ -102,6 +107,21 @@ footer
 				margin-right: 30px
 				&:hover
 					color: rgba(0,0,0,0.7)
+
+//o mnie
+.aboutMe
+	font-size: 14px
+	font-weight: 700
+	text-transform: uppercase
+	font-family: 'lato'
+	text-decoration: none
+	color: #e1c184
+	text-align: center
+
+.face-lockup
+	max-width: 789px
+	+display(flex)
+	
 
 
 
