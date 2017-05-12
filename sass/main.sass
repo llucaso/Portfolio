@@ -2,6 +2,8 @@
 =size($size)
 	width: $size
 	height: $size
+@import "bourbon/bourbon"
+
 
 =border-radius($radius)
 	-webkit-border-radius: $radius
@@ -11,37 +13,33 @@
 
 header
 	height: 450px
-	background: url(../new-images/74h.jpg) center center
+	background: url(../new-images/gdyniaprisma.jpg)
 	background-size: cover 
 	font-family: 'lato'
 
-.logo
-	img
-		+size(50px)
-		float: left
-		margin: 10px 0 0 30px
+	.logo
+		img
+			+size(50px)
+			float: left
+			margin: 10px 0 0 30px
 
+	nav
+		float: right
+		margin: 30px 30px 0 0
 
+		a
+			display: inline-block
+			margin-left: 20px
+			text-decoration: none
 
+			color: rgba(0,0,0,0.7)
+			font:
+				weight: 700
+				size: 14px
+			text-transform: uppercase
 
-
-
-nav
-	float: right
-	margin: 30px 30px 0 0
-
-	a
-		display: inline-block
-		margin-left: 20px
-
-		color: rgba(0,0,0,0.7)
-		font:
-			weight: 700
-			size: 14px
-		text-transform: uppercase
-
-		&:hover
-			color: rgba(0,0,0,1)
+			&:hover
+				color: rgba(0,0,0,1)
 
 h1
 	text-align: center
@@ -70,25 +68,41 @@ h1
 	line-height: 1
 
 footer
-	background: url(../new-images/74h.jpg) center center
+	background: url(../new-images/gdyniaprisma.jpg)
 	background-size: cover
 
 	.lockup
-		padding-top: 30px
-		clear: both
-		content: ""
-		display: table
+		padding: 50px 30px
+		+clearfix
 
-	.logo
-		+size(50px)
-		float: left
-		margin-right: 30px 
+		.logoFooter
+			img
+				+size(50px)
+				float: left
+				margin-right: 30px
 
-	.content-wrap
-		float: left
+		.content-wrap
+			float: left
 
-	.copywrights
-		margin: 0
-		text-transform: uppercase
-		font-size: 12px
-		color: rgba(0,0,0,0.4)
+			.copywrights
+				margin: 0
+				text-transform: uppercase
+				font-size: 12px
+				font-family: 'lato'
+				color: rgba(0,0,0,0.4)
+				
+			a
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				font-family: 'lato'
+				text-decoration: none
+				color: rgba(0,0,0,0.5)
+				display: inline-block
+				margin-right: 30px
+				&:hover
+					color: rgba(0,0,0,0.7)
+
+
+
+			
