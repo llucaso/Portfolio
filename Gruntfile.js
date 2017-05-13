@@ -48,6 +48,6 @@
 
 
   //Default task(s).
-  grunt.registerTask('default', ['sass' 'browserSync', 'watch']);
+  grunt.registerTask('default', ['sass', 'browserSync', 'watch']);
 
 };

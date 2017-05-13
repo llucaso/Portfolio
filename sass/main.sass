@@ -1,1 +1,222 @@
-﻿
+﻿*
+	margin: 0
+	padding: 0
+$color-hmm: #cccccc
+=size($size)
+	width: $size
+	height: $size
+@import "bourbon/bourbon"
+
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	border-radius:         $radius
+
+//header
+header
+	height: 450px
+	background: url(../new-images/gdyniaprisma.jpg) center center
+	background-size: cover 
+	font-family: 'lato'
+
+	.logo
+		img
+			+size(50px)
+			float: left
+			margin: 10px 0 0 30px
+
+	nav
+		float: right
+		margin: 30px 30px 0 0
+
+		a
+			display: inline-block
+			margin-left: 20px
+			text-decoration: none
+
+			color: rgba(0,0,0,0.7)
+			font:
+				weight: 700
+				size: 14px
+			text-transform: uppercase
+
+			&:hover
+				color: rgba(0,0,0,1)
+
+h1
+	text-align: center
+	font:
+		size: 72px
+		weight: 700
+	color: white
+	text-transform: uppercase
+	letter-spacing: 0.05em
+	margin-bottom: 20px
+	clear: both
+	padding-top: 100px
+
+	span
+		display: inline-block
+		padding: 0.2em 0.5em
+		border: white solid 10px
+
+.kicker
+	text-align: center
+	font:
+		weight: 700
+	text-transform: uppercase
+	letter-spacing: 0.05em
+	color: white
+	line-height: 1
+
+//footer
+footer
+	background: url(../new-images/gdyniaprisma.jpg)
+	background-size: cover
+
+	.lockup
+		padding: 50px 30px
+		+clearfix
+
+		.logoFooter
+			img
+				+size(50px)
+				float: left
+				margin-right: 30px
+
+		.content-wrap
+			float: left
+
+			.copywrights
+				margin: 0
+				text-transform: uppercase
+				font-size: 12px
+				font-family: 'lato'
+				color: rgba(0,0,0,0.4)
+				
+			a
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				font-family: 'lato'
+				text-decoration: none
+				color: rgba(0,0,0,0.5)
+				display: inline-block
+				margin-right: 30px
+				&:hover
+					color: rgba(0,0,0,0.7)
+
+//o mnie
+.aboutMe
+	font-size: 14px
+	font-weight: 700
+	text-transform: uppercase
+	font-family: 'lato'
+	text-decoration: none
+	color: #e1c184
+	text-align: center
+	padding: 100px 0 30px
+
+.face-lockup
+	max-width: 789px
+	+display(flex)
+	margin: 0 auto
+	align-items: center
+	justify-content: space-between
+
+	.face-img
+		+size(200px)
+		order: 3
+		background: url(../new-images/face.jpg) center center
+		
+.icon-html
+	order: 1
+	+border-radius(50%)
+	img
+		+size(100px)
+		
+.icon-css
+	order: 2
+	+border-radius(50%)
+	img
+		+size(100px)
+
+.icon-javascript
+	order: 4
+	+border-radius(50%)
+	img
+		+size(100px)
+
+.icon-api
+	order: 5
+	+border-radius(50%)
+	img
+		+size(100px)
+
+@media screen and (max-width: 650px)
+	.face-lockup
+		display: block
+		text-align: center
+		div
+			display: inline-block
+		.face-img
+			display: block
+			background-position: center center
+			background-repeat:  no-repeat
+			width: auto
+			margin-bottom: 30px
+
+		[class^='icon-']
+			margin: 10px
+
+.blurb
+	max-width: 620px
+	padding: 0 15px
+	margin: 50px auto
+	font-size: 24px
+	font-family: 'Open sans'
+	text-align: center
+	font-weight: 300
+
+.skill-lockup
+	max-width: 700px
+	margin: 100px auto
+	font-family: 'open sans'
+	color: #999999
+	+clearfix
+
+	.skill-unit
+		width: 350px
+		float: left
+
+	.skill-icons
+		font-size: 0
+		margin-bottom: 30px
+		margin: 0px 0 30px
+
+		span
+			display: inline-block
+			+size(14px)
+			background-color: #e1c184
+			margin-right: 2px
+			+border-radius(50%)
+
+			&:after
+				content: ''
+				display: block
+				+size(10px)
+				background-color: #ffffff
+				+border-radius(50%)
+				margin: 2px
+
+		//&.skill-8 span:nth-child(n+9)
+
+		@for $i from 1 through 10
+			&.skill-#{$i} span:nth-child(n+#{$i})
+				background-color:  #999999
+
+@media screen and (max-width: 541px)
+	.skill-lockup
+		width: 270px
