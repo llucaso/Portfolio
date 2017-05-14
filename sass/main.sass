@@ -1,7 +1,7 @@
 ﻿*
 	margin: 0
 	padding: 0
-$color-hmm: #cccccc
+$h: #e1c184
 =size($size)
 	width: $size
 	height: $size
@@ -220,3 +220,65 @@ footer
 @media screen and (max-width: 541px)
 	.skill-lockup
 		width: 270px
+
+
+.alt-section
+	background-color: #e5eaee
+	font-family: 'open sans'
+	a
+		text-decoration: none
+
+.thumb-container
+	max-width: 960px
+	margin: 0 auto
+	padding-bottom: 100px
+	+clearfix
+
+	.thumb-unit
+		display: block
+		width: 25%
+		float: left
+		position: relative
+		padding-top: 20%
+		overflow: hidden
+
+		@media screen and (max-width: 760px)
+			width: 50%
+			padding-top: 26%
+
+		background-image: url(../new-images/proj/bootstrap.png)
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+
+		.thumb-overlay
+			+position(absolute, 100% 0px null 0px)
+			height: 100%
+			background: fade-out($h, 0.1)
+			text-align: center
+			+transition
+			+display(flex)
+			+align-items(center)
+			+justify-content(center)
+
+			strong
+				display: block
+				padding: 0 20px
+				color: white
+				font-weight: 300
+				text-transform: uppercase
+				font-size: 24px
+				line-height: 1.2
+
+		&:hover .thumb-overlay
+			+position(absolute, 0% 0px null 0px)
+
+.proj
+	font-size: 14px
+	font-weight: 700
+	text-transform: uppercase
+	font-family: 'lato'
+	text-decoration: none
+	color: #e1c184
+	text-align: center
+	padding: 100px 0 30px
