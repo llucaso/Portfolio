@@ -3,11 +3,6 @@ $(function() {
   workBelt();
 });
 
-
-
-
-
-
 function smoothScrool (duration) {
   $('a[href^="#"]').on('click', function(event) {
     console.log("działa")
@@ -22,18 +17,18 @@ function smoothScrool (duration) {
   });
 }
 
-
-
 function workBelt () {
   $('.thumb-unit').click(function () {
     
-    $('.workBelt').css('left', '-100%');
+    $('.work-belt').css('left', '-100%');
       console.log('dziala 1');
+      $('.work-container').show();
     });
 
     $('.work-return').click(function () {
     
-      $('.workBelt').css('left', '0%');
+      $('.work-belt').css('left', '0%');
       console.log('dziala 2');
+      $('.work-container').hide(800);
   });
 }

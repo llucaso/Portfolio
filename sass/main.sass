@@ -242,29 +242,35 @@ footer
 	width: 50%
 	margin: 0 auto
 	float: left
+	display: block
 
 .work-belt
 	width: 200%
 	position: relative
 	left: 0%
-	//+transition()
+	+transition(all 800ms)
 
 
 
 
 .thumb-container
+	display: block
 	max-width: 960px
 	margin: 0 auto
 
 	+clearfix
 
 	.thumb-unit
-		display: block
-		width: 25%
-		float: left
 		position: relative
+		display: block
+		float: left
+		width: 25%
 		padding-top: 16%
-		+perspective(300)
+		overflow: hidden
+		img
+			display: block
+			max-width: 100%
+
 
 		@media screen and (max-width: 760px)
 			width: 50%
@@ -276,7 +282,7 @@ footer
 		background-size: cover
 
 		.thumb-overlay
-			+position(absolute, -50% 0px null 0px)
+			+position(absolute)
 			height: 100%
 			background: fade-out($h, 0.1)
 			text-align: center
@@ -316,6 +322,9 @@ footer
 .work-container
 	max-width: 600px
 	margin: 0 auto
+	padding: 0 15px
+	display: none
+	
 
 	h4
 		color: #e1c184
@@ -323,6 +332,7 @@ footer
 		text-transform: uppercase
 		font-size: 24px
 		line-height: 1.2
+		margin: 0 0 20px
 
 
 	img
