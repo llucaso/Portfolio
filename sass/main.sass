@@ -7,6 +7,9 @@ $h: #e1c184
 	height: $size
 @import "bourbon/bourbon"
 
+html, body 
+  overflow-x: hidden
+
 
 =border-radius($radius)
 	-webkit-border-radius: $radius
@@ -31,7 +34,7 @@ header
 
 	nav
 		float: right
-		margin: 30px 30px 0 0
+		padding: 30px 30px 0 0
 
 		a
 			display: inline-block
@@ -75,14 +78,39 @@ h1
 			line-height: 1
 			font-size: 15px
 
+@media (max-width: 640px)
+	header
+		.logo
+			+display(flex)
+			justify-content: center
+			img
+				margin: 50px 0px
+
+				
+
+		nav
+			float: none
+			text-align: center
+			padding: 0
+			margin-top: 10px
+			margin-bottom: 20px
+
+		h1
+			padding-top: 0px
+
+
+
 
 //footer
 footer
-	background-image: url
+	background-image: url(../new-images/gdyniaprisma.jpg)
 	
 	.lockup
 		padding: 50px 30px
 		+clearfix
+		+display(flex)
+		align-items: center
+		//justify-content: center
 
 		.logoFooter
 			img
@@ -93,12 +121,6 @@ footer
 		.content-wrap
 			float: left
 
-			.copywrights
-				margin: 0
-				text-transform: uppercase
-				font-size: 12px
-				font-family: 'lato'
-				color: rgba(0,0,0,0.4)
 				
 			a
 				font-size: 14px
@@ -112,9 +134,28 @@ footer
 				&:hover
 					color: rgba(0,0,0,0.7)
 
+@media (max-width: 640px)
+	footer
+		.lockup
+			.logoFooter
+				+display(flex)
+				justify-content: center
+
+
+	.content-wrap
+		nav	
+			+display(flex)
+			justify-content: center
+			align-items: center
+			flex-direction: row
+			flex-flow: wrap
+			a
+				padding: 10px
+
+
 //o mnie
 .aboutMe
-	font-size: 14px
+	font-size: 24px
 	font-weight: 700
 	text-transform: uppercase
 	font-family: 'lato'
@@ -133,7 +174,8 @@ footer
 	.face-img
 		+size(200px)
 		order: 3
-		background: url(../new-images/face.jpg) center center
+		background: url(../new-images/2.png) center center
+		background-size: 200px
 		
 .icon-html
 	order: 1
@@ -177,7 +219,7 @@ footer
 
 .blurb
 	max-width: 620px
-	padding: 0 15px
+	padding: 0 20px
 	margin: 50px auto
 	font-size: 24px
 	font-family: 'Open sans'
@@ -186,26 +228,25 @@ footer
 	color: #999999
 
 .skill-lockup
-	max-width: 700px
+	max-width: 540px
 	margin: 100px auto
 	font-family: 'open sans'
 	color: #999999
 	+clearfix
 
 	.skill-unit
-		width: 350px
+		width: 270px
 		float: left
 
 	.skill-icons
 		font-size: 0
-		margin-bottom: 30px
-		margin: 0px 0 30px
+		margin: 3px 0 30px
 
 		span
 			display: inline-block
 			+size(14px)
 			background-color: #e1c184
-			margin-right: 2px
+			margin-right: 8px
 			+border-radius(50%)
 
 			&:after
@@ -224,7 +265,10 @@ footer
 
 @media screen and (max-width: 541px)
 	.skill-lockup
-		width: 270px
+		width: 220px
+
+		.skill-unit
+			width: 220px
 
 
 .alt-section
@@ -254,7 +298,10 @@ footer
 	width: 200%
 	position: relative
 	left: 0%
-	+transition(all 800ms)
+	+transition(all, 800ms)
+
+	&.slided
+		+transform(translate3d(-50%, 0, 0))
 
 
 
@@ -273,6 +320,7 @@ footer
 		width: 25%
 		padding-top: 16%
 		overflow: hidden
+
 		img
 			display: block
 			max-width: 100%
@@ -285,11 +333,11 @@ footer
 
 		//background-image: url(../new-images/proj/bootstrap.png)
 		background-position: center center
-		background-repeat: no-repeat
+		//background-repeat: no-repeat
 		background-size: cover
 
 		.thumb-overlay
-			+position(absolute)
+			+position(absolute, -50% 0px null 0px)
 			height: 100%
 			width: 100%
 			background: fade-out($h, 0.1)
@@ -297,10 +345,11 @@ footer
 			+transition
 			+display(flex)
 			+align-items(center)
-			+justify-content(space-between)
+			+justify-content(space-around center)
 			+transform(rotateX(90deg))
 			+transform-origin(center bottom)
 			opacity: 0
+
 
 			strong
 				display: block
@@ -311,13 +360,15 @@ footer
 				font-size: 24px
 				line-height: 1.2
 
+
 		&:hover .thumb-overlay
 			top: 0%
 			+transform(rotateX(0deg))
 			opacity: 1
+			cursor: pointer
 
 .proj
-	font-size: 14px
+	font-size: 24px
 	font-weight: 700
 	text-transform: uppercase
 	font-family: 'lato'
@@ -477,3 +528,44 @@ footer
 				opacity: 1
 
 
+
+//foter icons
+.section-contact
+	background-color: white
+	text-align: center
+
+.social-links
+	max-width: 700px
+	margin: 15px auto 50px
+	+display(flex)
+	+justify-content(space-around)
+
+	a
+		display: block
+		background: #e1c184
+		+size(50px)
+		text-align: center
+		line-height: 50px
+		color: white
+		+border-radius(50%)
+		font-size: 28px
+		+transition()
+
+		&:hover
+			+transform(scale(1.3))
+
+.bar
+	width: 250px
+	height: 0px
+	border-top: 4px solid #e1c184
+	margin: 0px auto 70px
+
+.biglink
+	display: inline-block
+	font-size: 72px
+	font-family: 'lato'
+	font-weight: 300px
+	color: #e1c184
+	margin-bottom: 45px
+	&:hover
+		color: #E2D7C3
