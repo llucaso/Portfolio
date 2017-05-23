@@ -2,11 +2,16 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 	</head>
 	<body>
+
 	<header>
 
 		<div class="logo">
@@ -14,20 +19,20 @@
 		</div>
 
 		<nav>
-			<a href="">O mnie</a>
-			<a href="">Projekty</a>
-			<a href="">Kontakt</a>
+			<a href="#about-me">O mnie</a>
+			<a href="#projects">Portfolio</a>
+			<a href="#contact">Kontakt</a>
 		</nav>
 
-		<h1><span>Front-End Developer</span></h1>
-		<p class="kicker">{ Open minded // Envolving // Eager to learn }</p>
+		<h1><span>Front-End Developer<br><p class="kicker">{ Open minded // Envolving // Eager to learn }</p></span></h1>
+		
 
 
 	</header>
 
 	<section>
 		
-		<h3 class="aboutMe">O mnie</h3>
+		<h3 id="about-me" class="aboutMe">O mnie</h3>
 
 		<div class="face-lockup">
 
@@ -76,7 +81,100 @@
 			
 		</div>
 
+
 	</section>
+
+	<section class="alt-section section-work">
+		
+		<h3 id="projects" class="proj">Portfolio</h3>
+
+		<div class="work-belt">
+
+			<div class="thumb-wrap">
+				<div class="thumb-container">
+				
+					<div class="thumb-unit" data-folder="/work/work1.html" style="background-image: url(/new-images/proj/bootstrap.png">
+						<div class="thumb-overlay">
+							<strong>Bootstrap</strong>
+							<div class="zoom-icon"></div>
+						</div>
+					</div>
+
+					<div class="thumb-unit" data-folder="/work/work2.html" style="background-image: url(/new-images/proj/company.png")>
+						<div class="thumb-overlay">
+							<strong>PSD to HTML</strong>
+							<div class="zoom-icon"></div>
+						</div>
+					</div>
+
+					<div class="thumb-unit" data-folder="/work/work3.html" style="background-image: url(/new-images/proj/designlab.png")>
+						<div class="thumb-overlay">
+							<strong>PSD to HTML</strong>
+							<div class="zoom-icon"></div>
+						</div>
+					</div>
+
+					<div class="thumb-unit" data-folder="/work/work4.html" style="background-image: url(/new-images/proj/randomQuoteMachine.png")>
+						<div class="thumb-overlay">
+							<strong>Random Quote Machine</strong>
+							<div class="zoom-icon"></div>
+						</div>
+					</div>
+
+					<div class="thumb-unit" data-folder="/work/work5.html" style="background-image: url(/new-images/proj/RockPaperScr.png")>
+						<div class="thumb-overlay">
+							<strong>Kamień papier i nożyce</strong>
+							<div class="zoom-icon"></div>
+						</div>
+					</div>
+			</div>
+		</div>
+
+			<div class="work-wrap">
+				<div class="work-container">
+				<div class="work-return"><img src="new-images/return.svg"></div>
+					<h4 class="project-title">Do work</h4>
+					<div class="project-load"></div>
+					
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="alt-section section-contact">
+
+		<h3 id="contact" class="aboutMe">Kontakt</h3>
+
+		<div class="social-links">
+			<a target="_blank" class="fa fa-linkedin" href=""></a>
+			<a target="_blank" class="fa fa-github" href="https://github.com/llucaso"></a>
+			<a target="_blank" class="fa fa-codepen" href="http://codepen.io/llucaso/"></a>
+		</div>
+
+		<hr class="bar">
+
+		<a id='biglink' class="biglink" href="mailto:lredzinski@gmail.com">lredzinski@gmail.com</a>
+
+
+		
+
+
+
+
+
+	</section>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -95,15 +193,16 @@
 
 			<div class="content-wrap">
 				<nav>
-					<a href="">O mnie</a>
-					<a href="">Projekty</a>
-					<a href="">Kontakt</a>
+					<a href="#about-me">O mnie</a>
+					<a href="#projects">Portfolio</a>
+					<a href="#contact">Kontakt</a>
 				</nav>
 
-				<p class="copywrights">All content</p>
+				
 			</div>
 		</div>
-	</footer>
 
+	</footer>
+	<script type="text/javascript" src="js/scripts.js"></script>
 	</body>
 </html>
